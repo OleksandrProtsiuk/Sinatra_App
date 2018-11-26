@@ -8,32 +8,36 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <style>
-    html, body {
-      width: 100%;
-      height: 100%;
-    }
-    body {
-      background: url('https://img04.deviantart.net/0f27/i/2012/088/9/1/mane_6___angry_by_joemasterpencil-d4ubkdu.png') center no-repeat;
-      background-size: cover;
-    }
-
-    .red {
-      color: red;
+    .ggg {
+      color: lawngreen
     }
   </style>
   <title>Hello, Pony!</title>
 </head>
 
 <body class="bg-dark text-white">
-  <div class="container col-sm-12 row h-100 justify-content-center align-items-center">
-      <form method="post" action="/page">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Enter your pony-name" name="name">
-          <small class="form-text bg-dark text-warning">We'll never save your progress..</small>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+
+<div class="container h-100 justify-content-center align-items-center">
+  <div class="row">
+    <div class="col border border-success">
+      <img src="https://www.ponychan.net/chat/src/1510799660270.png" alt="img..." class="img-fluid rounded-circle">
+    </div>
+    <div class="col border border-success">
+      <H4 class="ggg"> <%= @name %> - angry pony</H4>
+      <h4 class="ggg">Status: <%= @pet %> </h4>
+      <h4 class="ggg">Parameters: </h4>
+      <div>
+        <form>
+          <button type="submit" class="btn btn-success" value="true">Care</button>
+          <button type="submit" class="btn btn-success" value="true">Feed</button>
+          <button type="submit" class="btn btn-success" value="true">Play</button>
+          <button type="submit" class="btn btn-success" value="true">Clear</button>
+          <button type="submit" class="btn btn-danger" value="kill">Kill</button>
+        </form>
+      </div>
+    </div>
   </div>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -41,4 +45,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
-</html>
+
