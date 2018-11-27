@@ -23,16 +23,45 @@
       <img src="https://www.ponychan.net/chat/src/1510799660270.png" alt="img..." class="img-fluid rounded-circle">
     </div>
     <div class="col border border-success">
-      <H4 class="ggg"> <%= @name %> - angry pony</H4>
-      <h4 class="ggg">Status: <%= @pet %> </h4>
-      <h4 class="ggg">Parameters: </h4>
-      <div>
+      <H4 class="ggg"> <%= session[:name] %> - angry pony</H4>
+      <h4 class="ggg">Status: <%= 'ALIVE' %> </h4>
+
+      <table class="table table-sm table-striped ggg">
+        <thead>
+        <tr>
+          <th><h4 class="ggg">Parameters: </h4></th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Health</td>
+          <td><%= @health %></td>
+        </tr>
+        <tr>
+          <td>Hunger</td>
+          <td><%= @hanger %></td>
+        </tr>
+        <tr>
+          <td>Joy</td>
+          <td><%= @joy %></td>
+        </tr>
+        <tr>
+          <td>Purity</td>
+          <td><%= @purity %></td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="row">
         <form>
-          <button type="submit" class="btn btn-success" value="true">Care</button>
-          <button type="submit" class="btn btn-success" value="true">Feed</button>
-          <button type="submit" class="btn btn-success" value="true">Play</button>
-          <button type="submit" class="btn btn-success" value="true">Clear</button>
-          <button type="submit" class="btn btn-danger" value="kill">Kill</button>
+          <button type="submit" class="btn btn-success" value="<%= @rand %>" name="care">Care</button>
+          <button type="submit" class="btn btn-success" value="<%= @rand %>" name="feed">Feed</button>
+          <button type="submit" class="btn btn-success" value="<%= @rand %>" name="play">Play</button>
+          <button type="submit" class="btn btn-success" value="<%= @rand %>" name="clear">Clear</button>
+        </form>
+          <P></P>
+        <form action="/dead" method="post">
+          <button type="submit" class="btn btn-danger" value="kill" name="kill">Kill</button>
         </form>
       </div>
     </div>
